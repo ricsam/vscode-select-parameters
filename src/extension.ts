@@ -4,12 +4,12 @@ import * as vscode from 'vscode';
 import { TextEditor } from "vscode";
 import { createSourceFile, Node, ScriptTarget, SyntaxKind, isTemplateSpan, JsxEmit } from "typescript";
 
-export interface Range {
+interface Range {
     start: number;
     end: number;
 }
 
-export interface SelectionStrategy {
+interface SelectionStrategy {
     grow(editor: TextEditor): Range[];
 }
 
@@ -53,7 +53,7 @@ function collapseWhitespace(editor: TextEditor, range: Range): Range {
     };
 }
 
-export function nodeToRange(node: Node) {
+function nodeToRange(node: Node) {
     let ds = 0;
     let de = 0;
     // if (node.kind === SyntaxKind.TemplateHead) {
@@ -114,7 +114,7 @@ const growRange = (editor: TextEditor, range: Range) => {
     return outRange;
 };
 
-export class TypescriptStrategy implements SelectionStrategy {
+class TypescriptStrategy implements SelectionStrategy {
     grow(editor: TextEditor): Range[] {
         const doc = editor.document;
         const startRanges = editor.selections.map(selection => ({
