@@ -3,6 +3,7 @@
 	"displayName": "Select Parameters",
 	"description": "Select every parameter in functions or react components. It will also select every key in objects or every item in arrays.",
 	"version": "0.0.1",
+	"publisher": "Richard Samuelson",
 	"engines": {
 		"vscode": "^1.36.0"
 	},
