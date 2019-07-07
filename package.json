@@ -2,7 +2,7 @@
 	"name": "selectparameters",
 	"displayName": "Select Parameters",
 	"description": "Select every parameter in functions or react components. It will also select every key in objects or every item in arrays.",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "richie",
 	"engines": {
 		"vscode": "^1.36.0"
@@ -12,7 +12,11 @@
 		"Other"
 	],
 	"keywords": [
-		"jsx", "react", "select", "typescript", "javascript"
+		"jsx",
+		"react",
+		"select",
+		"typescript",
+		"javascript"
 	],
 	"repository": {
 		"type": "git",
@@ -23,10 +27,12 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [{
-			"command": "extension.selectParameters",
-			"title": "Select Parameters"
-		}]
+		"commands": [
+			{
+				"command": "extension.selectParameters",
+				"title": "Select Parameters"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
